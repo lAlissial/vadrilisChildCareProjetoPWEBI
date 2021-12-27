@@ -13,7 +13,7 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String emaily;
+    private String mail;
     private String senha;
     private String nome;
     private String cpf;
@@ -24,6 +24,7 @@ public class Usuario {
     private String complemento;
 
     @OneToMany
+    @JoinColumn
     private List<Avaliacao> avaliacoes  = new ArrayList<Avaliacao>();
 
     public Usuario(){
@@ -31,7 +32,7 @@ public class Usuario {
     }
 
     public Usuario(String emaily, String senha, String nome, String cpf, String telefone, String cep, String num, String complemento, String dataAniversario){
-        this.emaily = emaily;
+        this.mail = emaily;
         this.senha= senha;
         this.nome = nome;
         this.cpf = cpf;
@@ -46,12 +47,12 @@ public class Usuario {
         return id;
     }
 
-    public String getEmaily() {
-        return emaily;
+    public String getMail() {
+        return mail;
     }
 
-    public void setEmaily(String emaily) {
-        this.emaily = emaily;
+    public void setMail(String emaily) {
+        this.mail = emaily;
     }
 
     public String getSenha() {

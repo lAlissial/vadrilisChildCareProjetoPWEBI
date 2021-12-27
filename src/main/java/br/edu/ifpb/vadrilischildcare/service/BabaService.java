@@ -30,9 +30,9 @@ public class BabaService {
     @Transactional
     public Baba inserirOuAtualizarBaba (Baba baba) {
         Baba babaInserida = this.babaRepository.save(baba);
-        if (Period.between(baba.getDataAniversario().toLocalDate(), LocalDateTime.now().toLocalDate()).getYears() < 18) {
+        /*if (Period.between(baba.getDataAniversario().toLocalDate(), LocalDateTime.now().toLocalDate()).getYears() < 18) {
             throw new RuntimeException("Menor de idade não permitido");
-        }
+        }*/
         return babaInserida;
     }
 

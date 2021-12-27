@@ -15,6 +15,7 @@ public class Crianca {
     private String dataAniversario;
 
     @OneToOne
+    @JoinColumn(name="resp_id", referencedColumnName="id")
     private Responsavel responsavel;
 
     public Crianca(){

@@ -11,9 +11,11 @@ public class Avaliacao {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name="us_emt_id", referencedColumnName="id")
     private Usuario emitente;
 
     @ManyToOne
+    @JoinColumn(name="us_dst_id", referencedColumnName="id")
     private Usuario destinatario;
 
     private String mensagem;

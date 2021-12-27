@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "tb_baba")
+//@Table(name = "tb_baba")
 public class Baba extends Usuario{
     private String descricao;
 

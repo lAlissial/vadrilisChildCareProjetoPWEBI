@@ -7,26 +7,26 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "tb_responsavel")
+//@Table(name = "tb_responsavel")
 public class Responsavel extends Usuario{
     @OneToOne
-    private Crianca criancaz;
+    @JoinColumn(name="cri_id", referencedColumnName="id")
+    private Crianca criancaw;
 
 
-    private Responsavel(){
-
+    public Responsavel(String emaily, String senha, String nome, String cpf, String telefone, String cep, String num, String complemento, String descricao, String dataAniversario) {
+        super(emaily, senha, nome, cpf, telefone, cep, num, complemento,dataAniversario);
     }
 
-    public Responsavel(String emaily, String senha, String nome, String cpf, String telefone, String cep, String num, String complemento, String descricao, LocalDateTime dataAniversario) {
-        super(emaily, senha, nome, cpf, telefone, cep, num, complemento,dataAniversario);
-        this.criancaz = new Crianca();
+    public Responsavel() {
+
     }
 
     public Crianca getCriancas() {
-        return criancaz;
+        return criancaw;
     }
 
     public void setCriancas(Crianca criancas) {
-        this.criancaz = criancas;
+        this.criancaw = criancas;
     }
 }
