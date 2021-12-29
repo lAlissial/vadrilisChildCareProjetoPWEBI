@@ -27,7 +27,7 @@ public class UsuarioService {
     }
 
     @Transactional
-    public Usuario inserirOuAtualizarUsuario(Usuario usuario) {
+    public Usuario inserirUsuario(Usuario usuario) {
         Usuario usuarioInserido = this.usuarioRepository.save(usuario);
        /* if (Period.between(usuario.getDataAniversario().toLocalDate(), LocalDateTime.now().toLocalDate()).getYears() < 18) {
             throw new RuntimeException("Menor de idade não permitido");

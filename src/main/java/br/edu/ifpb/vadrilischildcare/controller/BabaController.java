@@ -33,12 +33,12 @@ public class BabaController {
 
     @PostMapping("/babas")
     public Baba inserirBaba(@RequestBody Baba responsavel){
-        return this.babaService.inserirOuAtualizarBaba(responsavel);
+        return this.babaService.inserirBaba(responsavel);
     }
 
     @PutMapping("/babas/{id}")
     public Baba atualizarBaba(@RequestBody Baba responsavel){
-        return this.babaService.inserirOuAtualizarBaba(responsavel);
+        return this.babaService.inserirBaba(responsavel);
     }
 
     @DeleteMapping("/babas/{id}")

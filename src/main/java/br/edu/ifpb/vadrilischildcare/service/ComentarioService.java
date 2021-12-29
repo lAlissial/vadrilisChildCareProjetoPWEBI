@@ -28,7 +28,7 @@ public class ComentarioService {
     }
 
     @Transactional
-    public Comentario inserirOuAtualizarComentario (Comentario comentario) {
+    public Comentario inserirComentario (Comentario comentario) {
         Comentario comentarioInserido = this.comentarioRepository.save(comentario);
         return comentarioInserido;
     }
