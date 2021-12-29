@@ -9,7 +9,7 @@ public class Comentario {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String emailw;
+    private String mail;
     private String mensagem;
 
     public Comentario(){
@@ -17,21 +17,21 @@ public class Comentario {
     }
 
 
-    public Comentario(String emailw, String mensagem){
-        this.emailw = emailw;
+    /*public Comentario(String emailw, String mensagem){
+        this.mail = emailw;
         this.mensagem = mensagem;
-    }
+    }*/
 
     public Long getId() {
         return id;
     }
 
-    public String getEmailw() {
-        return emailw;
+    public String getmail() {
+        return this.mail;
     }
 
-    public void setEmailw(String emailw) {
-        this.emailw = emailw;
+    public void setmail(String emailw) {
+        this.mail = emailw;
     }
 
     public String getMensagem() {

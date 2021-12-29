@@ -32,12 +32,12 @@ public class UsuarioController {
 
     @PostMapping("/usuarios")
     public Usuario inserirUsuario(@RequestBody Usuario usuario){
-        return this.usuarioService.inserirOuAtualizarUsuario(usuario);
+        return this.usuarioService.inserirUsuario(usuario);
     }
 
     @PutMapping("/usuarios/{id}")
     public Usuario atualizarUsuario(@RequestBody Usuario usuario){
-        return this.usuarioService.inserirOuAtualizarUsuario(usuario);
+        return this.usuarioService.inserirUsuario(usuario);
     }
 
     @DeleteMapping("/usuarios/{id}")

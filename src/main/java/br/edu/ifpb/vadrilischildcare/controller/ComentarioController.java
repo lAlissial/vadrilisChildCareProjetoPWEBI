@@ -34,12 +34,12 @@ public class ComentarioController {
 
     @PostMapping("/comentarios")
     public Comentario inserirComentario(@RequestBody Comentario comentario){
-        return this.comentarioService.inserirOuAtualizarComentario(comentario);
+        return this.comentarioService.inserirComentario(comentario);
     }
 
     @PutMapping("/comentarios/{id}")
     public Comentario atualizarComentario(@RequestBody Comentario comentario){
-        return this.comentarioService.inserirOuAtualizarComentario(comentario);
+        return this.comentarioService.inserirComentario(comentario);
     }
 
     @DeleteMapping("/comentarios/{id}")
