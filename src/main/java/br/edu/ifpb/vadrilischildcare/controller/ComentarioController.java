@@ -39,11 +39,11 @@ public class ComentarioController {
 
     @PutMapping("/comentarios/{id}")
     public Comentario atualizarComentario(@RequestBody Comentario comentario){
-        return this.comentarioService.inserirComentario(comentario);
+        return this.comentarioService.atualizarComentario(comentario);
     }
 
     @DeleteMapping("/comentarios/{id}")
     public void apagarComentario(@PathVariable("id") Long id) {
-        this.comentarioService.apagarComentario(id);
+        this.comentarioService.removerComentario(id);
     }
 }

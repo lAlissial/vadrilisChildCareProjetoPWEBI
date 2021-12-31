@@ -29,11 +29,26 @@ public class ComentarioService {
 
     @Transactional
     public Comentario inserirComentario (Comentario comentario) {
+        /*Comentario comentarioJahCadastrado = this.comentarioRepository.findById(comentario.getId());
+        if (comentarioJahCadastrado != null){
+            throw new RuntimeException("Comentario já registrado");
+        }*/
         Comentario comentarioInserido = this.comentarioRepository.save(comentario);
+        //comentarioInserido.setMensagem(comentarioInserido.getMensagem()+ " Alterado");
         return comentarioInserido;
     }
 
-    public void apagarComentario(Long id) {
+    public void removerComentario(Long id) {
         this.comentarioRepository.deleteById(id);
+    }
+
+    @Transactional
+    public Comentario atualizarComentario (Comentario comentario) {
+        /*Comentario comentarioAtualizado = this.comentarioRepository.save(comentario);
+        comentarioAtualizado.setmail(comentario.getmail());
+        comentarioAtualizado.setMensagem(comentario.getMensagem());
+
+        return comentarioAtualizado;*/
+        return this.comentarioRepository.save(comentario);
     }
 }
